@@ -45,9 +45,10 @@ class BooksController < ApplicationController
     redirect_to books_path
     flash[:notice] = "Book was successfully destroyed."
   end
-end
 
-private
+  private
   def book_params
     params.require(:book).permit(:book, :title, :body)
   end
+  
+end
